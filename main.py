@@ -141,6 +141,7 @@ try:
 
         frame, error = detec_line_yellow(frame)
 
+        print(error)
         if error is None:
               parar_motores()   
 
