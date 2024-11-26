@@ -1,8 +1,8 @@
 import RPi.GPIO as GPIO
-from flask import Flask, Response
+# from flask import Flask, Response
 import cv2
 import numpy as np
-from flask_cors import CORS
+# from flask_cors import CORS
 import time
 
 # Inicializa a webcam
