@@ -96,13 +96,13 @@ GPIO.setup(IN2, GPIO.OUT)
 GPIO.setup(IN3, GPIO.OUT)
 GPIO.setup(IN4, GPIO.OUT)
 
-def tras():
+def frente():
         GPIO.output(IN1, GPIO.HIGH)
         GPIO.output(IN2, GPIO.LOW)
         GPIO.output(IN3, GPIO.LOW)
         GPIO.output(IN4, GPIO.HIGH)
 
-def frente():
+def tras():
         GPIO.output(IN1,GPIO.LOW)
         GPIO.output(IN2, GPIO.HIGH)
         GPIO.output(IN3, GPIO.HIGH)
@@ -146,11 +146,11 @@ try:
               parar_motores()   
 
         else:
-            if error > -10 and error < 10:
+            if error > -20 and error < 20:
                 frente()
-            elif error < -10:
+            elif error < -20:
                 esquerda()
-            elif error > 10:
+            elif error > 20:
                 direita()
 
 
