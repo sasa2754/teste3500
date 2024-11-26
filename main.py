@@ -5,8 +5,10 @@ import numpy as np
 # from flask_cors import CORS
 import time
 
+
+url = "https://192.158.12.174:8080/video"
 # Inicializa a webcam
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture()
 
 # Função para detectar uma linha amarela
 def detec_line_yellow(frame):
@@ -132,7 +134,12 @@ try:
             # time.sleep(3)
             # parar_motores()
             # time.sleep(1)
-        frame, error = detec_line_yellow()
+        success, frame = cap.read()
+        if not success:
+            print("Erro ao capturar frame da câmera.")
+            break
+        
+        frame, error = detec_line_yellow(frame)
 
         if error > -10 and error < 10:
               frente()
