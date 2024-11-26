@@ -6,7 +6,7 @@ import numpy as np
 import time
 
 
-url = "https://192.158.12.174:8080/video"
+url = "https://192.168.12.174:8080/video"
 # Inicializa a webcam
 cap = cv2.VideoCapture(url)
 
