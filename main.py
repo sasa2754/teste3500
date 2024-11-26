@@ -36,30 +36,30 @@ def detec_line_yellow(frame):
     return frame, None
 
 # Função para seguir a linha amarela
-def process_delivery():
-    while True:  # Loop para seguir a linha amarela
-        success, frame = cap.read()
-        if not success:
-            print("Erro ao capturar frame da câmera.")
-            break
+# def process_delivery():
+#     while True:  # Loop para seguir a linha amarela
+#         success, frame = cap.read()
+#         if not success:
+#             print("Erro ao capturar frame da câmera.")
+#             break
 
-        # Detecta a linha amarela
-        frame, error = detec_line_yellow(frame)
+#         # Detecta a linha amarela
+#         frame, error = detec_line_yellow(frame)
 
         # if error is None:
         #     continue
 
-        cv2.putText(frame, f'Alinhamento: {error}', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2, cv2.LINE_AA)
+        # cv2.putText(frame, f'Alinhamento: {error}', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2, cv2.LINE_AA)
 
         # Se encontrar a linha amarela, ajusta a direção
         # print(f"Erro de alinhamento: {error}")
 
         # Exibe o frame com feedback visual (opcional)
-        cv2.imshow('Robô', frame)
+        # cv2.imshow('Robô', frame)
 
         # Sai se pressionar 'q'
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
+        # if cv2.waitKey(1) & 0xFF == ord('q'):
+        #     break
 
 # Flask streaming para a webcam
 # def generate_frames():
@@ -126,7 +126,7 @@ def parar_motores():
         GPIO.output(IN3, GPIO.LOW)
         GPIO.output(IN4, GPIO.LOW)
 try:
-    process_delivery()
+    # process_delivery()
     while True:
             # frente()
             # time.sleep(3)
