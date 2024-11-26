@@ -141,14 +141,16 @@ try:
 
         frame, error = detec_line_yellow(frame)
 
-        if error > -10 and error < 10:
-              frente()
-        elif error < -10:
-              esquerda()
-        elif error > 10:
-              direita()
-        elif error is None:
-              parar_motores()            
+        if error is None:
+              parar_motores()   
+
+        else:
+            if error > -10 and error < 10:
+                frente()
+            elif error < -10:
+                esquerda()
+            elif error > 10:
+                direita()
 
 
 except KeyboardInterrupt:
