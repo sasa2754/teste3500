@@ -148,9 +148,9 @@ try:
             if error > -10 and error < 10:
                 frente()
             elif error < -10:
-                esquerda()
-            elif error > 10:
                 direita()
+            elif error > 10:
+                esquerda()
 
 
 except KeyboardInterrupt:
