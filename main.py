@@ -128,9 +128,11 @@ def parar_motores():
 try:
     # process_delivery()
     while True:
-            frente()
+            # frente()
+            direita()
             time.sleep(3)
-            tras()
+            # tras()
+            esquerda()
             time.sleep(3)
             parar_motores()
             time.sleep(1)
