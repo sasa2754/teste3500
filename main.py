@@ -8,7 +8,7 @@ import time
 
 url = "https://192.158.12.174:8080/video"
 # Inicializa a webcam
-cap = cv2.VideoCapture()
+cap = cv2.VideoCapture(url)
 
 # Função para detectar uma linha amarela
 def detec_line_yellow(frame):
@@ -138,7 +138,7 @@ try:
         if not success:
             print("Erro ao capturar frame da câmera.")
             break
-        
+
         frame, error = detec_line_yellow(frame)
 
         if error > -10 and error < 10:
