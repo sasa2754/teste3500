@@ -129,31 +129,31 @@ try:
     # process_delivery()
     while True:
             # frente()
-            direita()
-            time.sleep(3)
-            # tras()
-            esquerda()
-            time.sleep(3)
-            parar_motores()
-            time.sleep(1)
-        # success, frame = cap.read()
-        # if not success:
-        #     print("Erro ao capturar frame da câmera.")
-        #     break
+            # direita()
+            # time.sleep(3)
+            # # tras()
+            # esquerda()
+            # time.sleep(3)
+            # parar_motores()
+            # time.sleep(1)
+        success, frame = cap.read()
+        if not success:
+            print("Erro ao capturar frame da câmera.")
+            break
 
-        # frame, error = detec_line_yellow(frame)
+        frame, error = detec_line_yellow(frame)
 
-        # print(error)
-        # if error is None:
-        #       parar_motores()   
+        print(error)
+        if error is None:
+              parar_motores()   
 
-        # else:
-        #     if error > -20 and error < 20:
-        #         frente()
-        #     elif error < -20:
-        #         esquerda()
-        #     elif error > 20:
-        #         direita()
+        else:
+            if error > -20 and error < 20:
+                frente()
+            elif error < -20:
+                esquerda()
+            elif error > 20:
+                direita()
 
 
 except KeyboardInterrupt:
