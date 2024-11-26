@@ -148,11 +148,11 @@ try:
               parar_motores()   
 
         else:
-            if error > -20 and error < 20:
+            if error > -100 and error < 100:
                 frente()
-            elif error < -20:
+            elif error < -100:
                 direita()
-            elif error > 20:
+            elif error > 100:
                 esquerda()
 
 
