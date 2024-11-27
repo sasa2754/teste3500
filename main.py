@@ -141,7 +141,7 @@ try:
         direita()
         time.sleep(0.5)
         # time.sleep(1)
-        tras()
+        frente()
         time.sleep(3)
         #     success, frame = cap.read()
         #     if not success:
