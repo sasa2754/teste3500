@@ -130,9 +130,9 @@ def kau():
         frente()
         time.sleep(4)
         esquerda()
-        time.sleep(0.6)
+        time.sleep(0.5)
         frente()
-        time.sleep(25)
+        time.sleep(22)
         parar_motores()
         
 
