@@ -138,11 +138,11 @@ try:
         frente()
         time.sleep(2)
         parar_motores()
-        esquerda()
+        direita()
         time.sleep(0.5)
         # time.sleep(1)
         tras()
-        time.sleep(1)
+        time.sleep(3)
         #     success, frame = cap.read()
         #     if not success:
         #         print("Erro ao capturar frame da câmera.")
