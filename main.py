@@ -128,34 +128,39 @@ def parar_motores():
 try:
     # process_delivery()
     while True:
-            # frente()
-            # time.sleep(3)
-            # direita()
-            # time.sleep(3)
-            # tras()
-            # time.sleep(3)
-            # esquerda()
-            # time.sleep(3)
-            # parar_motores()
-            # time.sleep(1)
-            success, frame = cap.read()
-            if not success:
-                print("Erro ao capturar frame da câmera.")
-                break
+        frente()
+        time.sleep(4)
+        direita()
+        time.sleep(0.5)
+        #     tras()
+        #     time.sleep(3)
+        #     esquerda()
+        frente()
+        time.sleep(2)
+        parar_motores()
+        esquerda()
+        time.sleep(0.5)
+        # time.sleep(1)
+        tras()
+        time.sleep(1)
+        #     success, frame = cap.read()
+        #     if not success:
+        #         print("Erro ao capturar frame da câmera.")
+        #         break
 
-            frame, error = detec_line_yellow(frame)
+        #     frame, error = detec_line_yellow(frame)
 
-            print(error)
-            if error is None:
-                parar_motores()   
+        #     print(error)
+        #     if error is None:
+        #         parar_motores()   
 
-            else:
-                if error > -150 and error < 150:
-                    frente()
-                elif error < -150:
-                    direita()
-                elif error > 150:
-                    esquerda()
+        #     else:
+        #         if error > -150 and error < 150:
+        #             frente()
+        #         elif error < -150:
+        #             direita()
+        #         elif error > 150:
+        #             esquerda()
 
 
 except KeyboardInterrupt:
